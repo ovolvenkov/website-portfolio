@@ -46,6 +46,17 @@ scrollBtn.addEventListener('click', (e=>{
 		//document.querySelector('.header').scrollIntoView({ behavior: 'smooth' })
 }
 
-
-
 smoothScrollingTop()
+
+function changeBackgroundImg() {
+	let img = document.querySelector('.background_img');
+
+	document.addEventListener('scroll', ()=>{
+		if (window.pageYOffset >= 2300) {
+			img.style.background = 'url(img/scroll2.jpg) no-repeat center/cover';
+		} else {
+			img.style.background = 'url(img/scroll_bg1.jpg) no-repeat center/cover'
+		}
+	})
+}
+changeBackgroundImg()
